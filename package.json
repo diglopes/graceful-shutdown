@@ -6,6 +6,7 @@
   "author": "Diego Lopes <diego-chez@hotmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.10.3"
   }
 }

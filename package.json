@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/diglopes/graceful-shutdown.git",
   "author": "Diego Lopes <diego-chez@hotmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

@@ -25,4 +25,16 @@ app.post('/user', async (req, res) => {
     }
 })
 
-app.listen(3000, () => console.info('Example app listening on port 3000!'))
+const server = app.listen(3000, () => console.info('Example app listening on port 3000!'))
+
+process.on('SIGTERM', () => {
+    console.info('SIGTERM signal received!')  
+    console.info("Closing http server")
+    server.close(() =>  {
+        console.info("Http server closed");
+        mongoose.connection.close(false, () => {
+            console.info("Mondodb connection close")
+            process.exit(0)
+        })
+    })  
+})

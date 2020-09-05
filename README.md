@@ -16,6 +16,7 @@ Prevents unexpected outcomes that can happen when closing connections immediatel
 Four important steps to do a graceful shutdown:
 
 - Handle process kill signal
+  - A signal is an asyncronous notification sent to a **process** or to a specific **thread** to notify an event that occurred
 - Stop new requests from client
 - Close all data process
 - Exit from process
